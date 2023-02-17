@@ -5,27 +5,15 @@
 @section('content')
     <div class="main">
         <div class="books">
-            <div class="book">
-                <div class="img_block">
-                    <img src="https://www.moscowbooks.ru/image/book/676/w259/i676150.jpg?cu=20191022164537" />
+            @foreach($books as $book)
+                <div class="book">
+                    <div class="img_block">
+                        <img src="{{ $book['img'] }}" />
+                    </div>
+                    <h3>{{ $book['name'] }}</h3>
+                    <p>Автор: {{ $book->author()->username }}</p>
                 </div>
-                <h3>name</h3>
-                <p>Автор: серега</p>
-            </div>
-            <div class="book">
-                <div class="img_block">
-                    <img src="https://www.moscowbooks.ru/image/book/676/w259/i676150.jpg?cu=20191022164537" />
-                </div>
-                <h3>name</h3>
-                <p>Автор: серега</p>
-            </div>
-            <div class="book">
-                <div class="img_block">
-                    <img src="https://www.moscowbooks.ru/image/book/676/w259/i676150.jpg?cu=20191022164537" />
-                </div>
-                <h3>name</h3>
-                <p>Автор: серега</p>
-            </div>
+            @endforeach
         </div>
     </div>
 @endsection
