@@ -14,16 +14,16 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-//        User::query()->create([
-//            'username' => 'alphison.',
-//            'password' => Hash::make('123123'),
-//            'role' => 'admin'
-//        ]);
-//
-//        User::query()->create([
-//            'username' => 'user',
-//            'password' => Hash::make('123123'),
-//            'role' => 'user'
-//        ]);
+        User::query()->create([
+            'username' => 'alphison.',
+            'password' => Hash::make('123123'),
+            'role' => 'admin'
+        ]);
+
+        User::query()->create([
+            'username' => 'user',
+            'password' => Hash::make('123123'),
+            'role' => 'user'
+        ]);
     }
 }

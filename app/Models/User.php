@@ -24,6 +24,11 @@ class User extends Authenticatable
         'role'
     ];
 
+    public function books()
+    {
+        return $this->hasMany(Book::class, 'author_id', 'id')->get();
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

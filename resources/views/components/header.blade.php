@@ -9,6 +9,7 @@
             <a class="link" href="/reg">Register</a>
         @endguest
         @auth()
+            <a href="/add" class="link">Add Book</a>
             <a class="link" href="/exit">Exit</a>
         @endauth
     </nav>
